@@ -1,16 +1,12 @@
-import './App.css'
-import Gallery from './Components/Gallery.jsx';
-
-
-
+import "./App.css";
+import Gallery from "./Components/Gallery.jsx";
 
 function App() {
-  
   return (
     <div>
-    <Gallery />
+      <Gallery />
     </div>
-  )
+  );
 }
 
 export default App;
