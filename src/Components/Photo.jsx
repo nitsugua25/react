@@ -1,6 +1,9 @@
-const Photo = () => {
+import Gallery from "./Gallery";
+
+const Photo = (props) => {
+    let url = "https://fastly.picsum.photos/id/"+props.id+"/"+props.size+".jpg?hmac=Z4ZkUsrFrxw28ByS2PTXgwqYLrKE9CIHV2nVAp7-o9k"
   return (
-    <img src="https://fastly.picsum.photos/id/11/400/300.jpg?hmac=jdN4m6B0VjTcGjxHhLwYUsILERHmeAhsarREzKHi15U"></img>
+    <img src={url}></img>
   );
 };
 
