@@ -4,8 +4,8 @@ const Gallery = () => {
   return (
     <div>
       <h1>Gallerie de photos</h1>
-      <Photo id={"469"} size={"400/300"}></Photo>
-      <Photo id={"469"} size={"400/300"}></Photo>
+      <Photo id={469} size={{width:"400",heigth:"300"}} />
+      <Photo id={469} size={{width:"400",heigth:"300"}} />
     </div>
   );
 };
