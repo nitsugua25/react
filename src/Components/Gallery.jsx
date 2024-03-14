@@ -5,6 +5,7 @@ const Gallery = () =>{
 
     return(
       <div>
+        <h1>Gallerie de photos</h1>
         <Photo></Photo>
         <Photo></Photo>
       </div>

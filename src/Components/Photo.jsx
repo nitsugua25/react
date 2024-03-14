@@ -1,6 +1,6 @@
 const Photo = () =>{
     return(
-        <img src="https://fastly.picsum.photos/id/495/500/300.jpg?grayscale&hmac=FbTejLz7fa2LtZpHy0njy5I510aAsxCR_XH4qJBZYWo"></img>  
+        <img src="https://fastly.picsum.photos/id/11/400/300.jpg?hmac=jdN4m6B0VjTcGjxHhLwYUsILERHmeAhsarREzKHi15U"></img>  
     )
 }
 
