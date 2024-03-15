@@ -1,9 +1,11 @@
 import "./App.css";
 import Gallery from "./Components/Gallery.jsx";
+import Search from "./Components/Search.jsx";
 
 function App() {
   return (
     <div>
+      <Search/>
       <Gallery liste={[
     {
       id: "20",
