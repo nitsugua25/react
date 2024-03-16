@@ -13,7 +13,7 @@ const Gallery = (props) => {
         return(
         // eslint-disable-next-line react/jsx-key
         <div>
-        <p>{element.author} #{element.id}</p>
+        <p>{element.author} {props.isShow && <span>#{element.id}</span>}</p>
         <Photo url={element.download_url}/>
         </div>
         )

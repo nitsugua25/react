@@ -94,10 +94,17 @@ function App() {
     });
     setBookFilter(filtered);
   }
+
+  const [isShow,setIsShow] = useState(false);
+  const handleCheckedChange = (event) => {
+    setIsShow(event.target.checked);
+  }
   return (
     <div>
+      <input type="checkbox" name="searchBar" onChange={handleCheckedChange}/>
+      <label htmlFor="searchBar">Affiche l'ID de l'image</label>
       <Search onSearch={handleSearch}/>
-      <Gallery liste={bookfilter}/>
+      <Gallery liste={bookfilter} isShow={isShow}/>
     </div>
   );
 }
