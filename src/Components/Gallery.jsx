@@ -4,6 +4,7 @@ import Photo from "./Photo.jsx";
 
 
 const Gallery = (props) => {
+  
   return (
     <div>
       <h1>Gallerie de photos</h1>

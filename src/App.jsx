@@ -1,12 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import Gallery from "./Components/Gallery.jsx";
 import Search from "./Components/Search.jsx";
 
 function App() {
-  return (
-    <div>
-      <Search/>
-      <Gallery liste={[
+  const books = [
     {
       id: "20",
       author: "Aleks Dorohovich",
@@ -87,7 +85,19 @@ function App() {
       url: "https://unsplash.com/photos/V0yAek6BgGk",
       download_url: "https://picsum.photos/id/29/4000/2670"
     }
-  ]}/>
+  ]
+  const [bookfilter,setBookFilter] = useState(books);
+
+  const handleSearch = (event) =>{
+    let filtered = books.filter(item =>{
+      return item.author.includes(event.target.value);
+    });
+    setBookFilter(filtered);
+  }
+  return (
+    <div>
+      <Search onSearch={handleSearch}/>
+      <Gallery liste={bookfilter}/>
     </div>
   );
 }
