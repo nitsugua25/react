@@ -1,7 +1,11 @@
+import { useState } from "react";
 import Photo from "./Photo.jsx";
+import { useEffect } from "react";
+import axios from "axios";
 
 
 const Gallery = (props) => {
+  
   return (
     <div>
       <h1>Gallerie de photos</h1>
