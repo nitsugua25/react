@@ -4,6 +4,7 @@ import Gallery from "./Components/Gallery.jsx";
 import Search from "./Components/Search.jsx";
 
 function App() {
+  
   const books = [
     {
       id: "20",
