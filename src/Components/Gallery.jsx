@@ -1,7 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import Photo from "./Photo.jsx";
-import { useEffect } from "react";
-import axios from "axios";
+
 
 
 const Gallery = (props) => {
@@ -12,8 +11,9 @@ const Gallery = (props) => {
       {props.liste.map((element) => {
 
         return(
+        // eslint-disable-next-line react/jsx-key
         <div>
-        <p>{element.author} #{element.id}</p>
+        <p>{element.author} {props.isShow && <span>#{element.id}</span>}</p>
         <Photo url={element.download_url}/>
         </div>
         )
@@ -23,5 +23,6 @@ const Gallery = (props) => {
       </div>
   );
 };
+
 
 export default Gallery;

@@ -1,8 +1,10 @@
-import Gallery from "./Gallery";
+/* eslint-disable react/prop-types */
+
 
 const Photo = (props) => {
    return (
-    <img class="image" src={props.url}></img>
+    
+    <img className="image" src={props.url}></img>
   );
 };
 

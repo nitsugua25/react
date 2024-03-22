@@ -1,11 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import Gallery from "./Components/Gallery.jsx";
+import Search from "./Components/Search.jsx";
 
 function App() {
-  
-  return (
-    <div>
-      <Gallery liste={[
+  const books = [
     {
       id: "20",
       author: "Aleks Dorohovich",
@@ -86,7 +85,26 @@ function App() {
       url: "https://unsplash.com/photos/V0yAek6BgGk",
       download_url: "https://picsum.photos/id/29/4000/2670"
     }
-  ]}/>
+  ]
+  const [bookfilter,setBookFilter] = useState(books);
+
+  const handleSearch = (event) =>{
+    let filtered = books.filter(item =>{
+      return item.author.includes(event.target.value);
+    });
+    setBookFilter(filtered);
+  }
+
+  const [isShow,setIsShow] = useState(false);
+  const handleCheckedChange = (event) => {
+    setIsShow(event.target.checked);
+  }
+  return (
+    <div>
+      <input type="checkbox" name="searchBar" onChange={handleCheckedChange}/>
+      <label htmlFor="searchBar">Affiche l'ID de l'image</label>
+      <Search onSearch={handleSearch}/>
+      <Gallery liste={bookfilter} isShow={isShow}/>
     </div>
   );
 }
